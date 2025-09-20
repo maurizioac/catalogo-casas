@@ -4,40 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catálogo de Propiedades</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/your-font-awesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
       <div class="logo">Halo</div>
       <nav class="nav">
-        <a href="#">Vender</a>
-        <a href="#">Comprar</a>
-        <a href="#">¿Cómo comprar?</a>
-        <a href="#">Habímetro</a>
-        <a href="#">Centro de ayuda</a>
+        <a href="venta.html">Vender</a>
+        <a href="compra.html">Comprar</a>
+        <a href="comocomprar.html">¿Cómo comprar?</a>
+        <a href="habimetro.html">Habímetro</a>
+        <a href="centroayuda.html">Centro de ayuda</a>
       </nav>
       <div class="header-right">
         <span class="location">COL</span>
         <button class="menu-btn">Menú</button>
       </div>
     </header>
-
     <main class="main-content">
-      <div class="filter-section">
-        <button class="filter-btn">
-          <i class="fas fa-filter"></i> Filtros
+      <div class="path-nav">
+        <a href="#">Home</a>
+        <a href="#">Venta apartamentos</a>
+      </div>
+      <div class="top-bar">
+        <div class="filter-section">
+          <button class="filter-btn">
+            <i class="fas fa-filter"></i> Filtros
+          </button>
+        </div>
+        <div class="sort-section">
+          <span>Ordenar Por</span>
+          <select class="sort-dropdown">
+            <option value="relevancia">Relevancia</option>
+            <option value="precio-asc">Precio (menor a mayor)</option>
+            <option value="precio-desc">Precio (mayor a menor)</option>
+          </select>
+        </div>
+      </div>
+      <div class="heading-row">
+        <h1>Venta de apartamentos en Colombia</h1>
+        <button class="info-btn">
+          <i class="fas fa-envelope"></i> Recibir Información
         </button>
       </div>
-
-      <h1>Venta de apartamentos en Colombia</h1>
-
       <div class="property-catalog" id="property-catalog"></div>
     </main>
 
-    <script src="script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/your-font-awesome-kit.js"
-      crossorigin="anonymous"
-    ></script>
+    <div id="property-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-body">
+          <img
+            id="modal-image"
+            alt="Imagen de la propiedad"
+            class="modal-image"
+          />
+          <div class="modal-details">
+            <h2 id="modal-location"></h2>
+            <p id="modal-type"></p>
+            <p id="modal-price"></p>
+            <p id="modal-area"></p>
+            <p id="modal-rooms"></p>
+            <p id="modal-bathrooms"></p>
+            <p id="modal-parking"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript.js"></script>
   </body>
 </html>
